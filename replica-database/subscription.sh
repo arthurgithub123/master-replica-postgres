@@ -18,7 +18,7 @@ done
 # FATAL:  the database system is starting up
 # psql: error: connection to server at "replica_database",
 # port 5432 failed: FATAL: the database  system is starting up.
-# (Try removing lines 12 to 16 below and see what happens).
+# (Try removing lines 23 to 27 below and see what happens).
 # https://www.postgresql.org/docs/current/app-pg-isready.html
 pg_isready --host=replica_database --port=5432
 while [ $? != 0 ]; do
