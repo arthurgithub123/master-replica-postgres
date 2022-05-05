@@ -12,7 +12,6 @@
 ###### explaining the code for better understanding,
 ###### studying.
 #
-#
 > There is still an error to fix: the auto increment in the tables as serial is being used. It causes an error if you insert some data in the replica table after a replication is done.
 > But if do not want to use serial and use an id provided by an API there will be no problem.
 
