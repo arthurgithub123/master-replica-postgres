@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  master_database:
+    build: ./master-database
+    container_name: master_container
+    restart: always
+    ports:
+      - 11111:5432
+    networks:
+      - my-network
+  replica_database:
+    build: ./replica-database
+    container_name: replica_container
+    restart: always
+    depends_on:
+      - master_database
+    ports:
+      - 22222:5432
+    networks:
+      - my-network
+networks:
+  my-network:
+    driver: bridge
